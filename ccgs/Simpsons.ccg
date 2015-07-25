@@ -1,0 +1,543 @@
+<ClueGame>
+	<Rooms displayRoomPicturesOnBoard="true">
+		<Room id="1" name="The Android&apos;s Dungeon" pictureName="TheAndroidsDungeon.png" transparentPictureColor="-1" />
+		<Room id="2" name="Burns Manor" pictureName="BurnsManor.png" transparentPictureColor="-1" />
+		<Room id="3" name="Krustylu Studios" pictureName="KrustyluStudios.png" transparentPictureColor="-1" />
+		<Room id="4" name="The Frying Dutchman" pictureName="TheFryingDutchman.png" transparentPictureColor="-1" />
+		<Room id="5" name="Barney&apos;s Bowl-A-Rama" pictureName="BarneysBowlARama.png" transparentPictureColor="-1" />
+		<Room id="6" name="The Simpson House" pictureName="TheSimpsonHouse.png" transparentPictureColor="-1" />
+		<Room id="7" name="Springfield Retirement Castle" pictureName="SpringfieldRetirementCastle.png" transparentPictureColor="-1" />
+		<Room id="8" name="Nuclear Power Plant" pictureName="NuclearPowerPlant.png" transparentPictureColor="-1" />
+		<Room id="9" name="Kwik-E-Mart" pictureName="KwikEMart.png" transparentPictureColor="-1" />
+	</Rooms>
+	<Suspects>
+		<Suspect id="1" name="Lisa Simpson" color="-7667712" pictureName="LisaSimpson.png" />
+		<Suspect id="2" name="Krusty the Clown" color="-256" pictureName="KrustyTheClown.png" />
+		<Suspect id="3" name="Waylon Smithers" color="-1" pictureName="WaylonSmithers.png" />
+		<Suspect id="4" name="Homer Simpson" color="-16751616" pictureName="HomerSimpson.png" />
+		<Suspect id="5" name="Marge Simpson" color="-16776961" pictureName="MargeSimpson.png" />
+		<Suspect id="6" name="Bart Simpson" color="-11861886" pictureName="BartSimpson.png" />
+	</Suspects>
+	<Weapons>
+		<Weapon id="1" name="Extend-O-Glove" pictureName="ExtendOGlove.png" />
+		<Weapon id="2" name="Necklace" pictureName="Necklace.png" />
+		<Weapon id="3" name="Plutonium Rod" pictureName="PlutoniumRod.png" />
+		<Weapon id="4" name="Poisoned Donut" pictureName="PoisonedDonut.png" />
+		<Weapon id="5" name="Saxophone" pictureName="Saxophone.png" />
+		<Weapon id="6" name="Slingshot" pictureName="Slingshot.png" />
+	</Weapons>
+	<ClueBoard height="25" width="24" backgroundImageFilename="Simpsons_background.png" backgroundColor="-1">
+		<Tile row="0" col="0" roomId="1" />
+		<Tile row="0" col="1" roomId="1" />
+		<Tile row="0" col="2" roomId="1" />
+		<Tile row="0" col="3" roomId="1" />
+		<Tile row="0" col="4" roomId="1" />
+		<Tile row="0" col="5" roomId="1" />
+		<Tile row="0" col="6" removed="true" />
+		<Tile row="0" col="8" removed="true" />
+		<Tile row="0" col="9" removed="true" />
+		<Tile row="0" col="10" roomId="2" />
+		<Tile row="0" col="11" roomId="2" />
+		<Tile row="0" col="12" roomId="2" />
+		<Tile row="0" col="13" roomId="2" />
+		<Tile row="0" col="14" removed="true" />
+		<Tile row="0" col="15" removed="true" />
+		<Tile row="0" col="16" suspectId="1" suspectDirection="SOUTH" />
+		<Tile row="0" col="17" removed="true" />
+		<Tile row="0" col="18" roomId="3" />
+		<Tile row="0" col="19" roomId="3" />
+		<Tile row="0" col="20" roomId="3" />
+		<Tile row="0" col="21" roomId="3" />
+		<Tile row="0" col="22" roomId="3" />
+		<Tile row="0" col="23" roomId="3" />
+		<Tile row="1" col="0" roomId="1" />
+		<Tile row="1" col="1" roomId="1" />
+		<Tile row="1" col="2" roomId="1" />
+		<Tile row="1" col="3" roomId="1" />
+		<Tile row="1" col="4" roomId="1" />
+		<Tile row="1" col="5" roomId="1" />
+		<Tile row="1" col="6" roomId="1" />
+		<Tile row="1" col="9" roomId="2" />
+		<Tile row="1" col="10" roomId="2" />
+		<Tile row="1" col="11" roomId="2" />
+		<Tile row="1" col="12" roomId="2" />
+		<Tile row="1" col="13" roomId="2" />
+		<Tile row="1" col="14" roomId="2" />
+		<Tile row="1" col="17" roomId="3" />
+		<Tile row="1" col="18" roomId="3" />
+		<Tile row="1" col="19" roomId="3" />
+		<Tile row="1" col="20" roomId="3" />
+		<Tile row="1" col="21" roomId="3" />
+		<Tile row="1" col="22" roomId="3" />
+		<Tile row="1" col="23" roomId="3" />
+		<Tile row="2" col="0" roomId="1" />
+		<Tile row="2" col="1" roomId="1" />
+		<Tile row="2" col="2" roomId="1" />
+		<Tile row="2" col="3" roomId="1" />
+		<Tile row="2" col="4" roomId="1" />
+		<Tile row="2" col="5" roomId="1" />
+		<Tile row="2" col="6" roomId="1" />
+		<Tile row="2" col="9" roomId="2" />
+		<Tile row="2" col="10" roomId="2" />
+		<Tile row="2" col="11" roomId="2" />
+		<Tile row="2" col="12" roomId="2" />
+		<Tile row="2" col="13" roomId="2" />
+		<Tile row="2" col="14" roomId="2" />
+		<Tile row="2" col="17" roomId="3" />
+		<Tile row="2" col="18" roomId="3" />
+		<Tile row="2" col="19" roomId="3" />
+		<Tile row="2" col="20" roomId="3" />
+		<Tile row="2" col="21" roomId="3" />
+		<Tile row="2" col="22" roomId="3" />
+		<Tile row="2" col="23" roomId="3" />
+		<Tile row="3" col="0" roomId="1">
+			<PassageConnection row="23" col="18" />
+		</Tile>
+		<Tile row="3" col="1" roomId="1" />
+		<Tile row="3" col="2" roomId="1" />
+		<Tile row="3" col="3" roomId="1" />
+		<Tile row="3" col="4" roomId="1" />
+		<Tile row="3" col="5" roomId="1" />
+		<Tile row="3" col="6" roomId="1">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="3" col="9" roomId="2" />
+		<Tile row="3" col="10" roomId="2" />
+		<Tile row="3" col="11" roomId="2" />
+		<Tile row="3" col="12" roomId="2" />
+		<Tile row="3" col="13" roomId="2" />
+		<Tile row="3" col="14" roomId="2" />
+		<Tile row="3" col="17" roomId="3" />
+		<Tile row="3" col="18" roomId="3" />
+		<Tile row="3" col="19" roomId="3" />
+		<Tile row="3" col="20" roomId="3" />
+		<Tile row="3" col="21" roomId="3" />
+		<Tile row="3" col="22" roomId="3" />
+		<Tile row="3" col="23" roomId="3" />
+		<Tile row="4" col="0" removed="true" />
+		<Tile row="4" col="6">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="4" col="8">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="4" col="9" roomId="2">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="4" col="10" roomId="2" />
+		<Tile row="4" col="11" roomId="2" />
+		<Tile row="4" col="12" roomId="2" />
+		<Tile row="4" col="13" roomId="2" />
+		<Tile row="4" col="14" roomId="2" />
+		<Tile row="4" col="17" roomId="3" />
+		<Tile row="4" col="18" roomId="3" />
+		<Tile row="4" col="19" roomId="3" />
+		<Tile row="4" col="20" roomId="3" />
+		<Tile row="4" col="21" roomId="3" />
+		<Tile row="4" col="22" roomId="3" />
+		<Tile row="4" col="23" roomId="3" />
+		<Tile row="5" col="0" suspectId="6" suspectDirection="EAST" />
+		<Tile row="5" col="9" roomId="2" />
+		<Tile row="5" col="10" roomId="2" />
+		<Tile row="5" col="11" roomId="2" />
+		<Tile row="5" col="12" roomId="2" />
+		<Tile row="5" col="13" roomId="2" />
+		<Tile row="5" col="14" roomId="2" />
+		<Tile row="5" col="17" roomId="3">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="5" col="18" roomId="3" />
+		<Tile row="5" col="19" roomId="3" />
+		<Tile row="5" col="20" roomId="3" />
+		<Tile row="5" col="21" roomId="3" />
+		<Tile row="5" col="22" roomId="3" />
+		<Tile row="5" col="23" roomId="3">
+			<PassageConnection row="19" col="1" />
+		</Tile>
+		<Tile row="6" col="0" removed="true" />
+		<Tile row="6" col="1" roomId="4" />
+		<Tile row="6" col="2" roomId="4" />
+		<Tile row="6" col="3" roomId="4" />
+		<Tile row="6" col="4" roomId="4" />
+		<Tile row="6" col="5" roomId="4" />
+		<Tile row="6" col="9" roomId="2" />
+		<Tile row="6" col="10" roomId="2" />
+		<Tile row="6" col="11" roomId="2">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="6" col="12" roomId="2">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="6" col="13" roomId="2" />
+		<Tile row="6" col="14" roomId="2" />
+		<Tile row="6" col="17">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="6" col="23" removed="true" />
+		<Tile row="7" col="0" roomId="4" />
+		<Tile row="7" col="1" roomId="4" />
+		<Tile row="7" col="2" roomId="4" />
+		<Tile row="7" col="3" roomId="4" />
+		<Tile row="7" col="4" roomId="4" />
+		<Tile row="7" col="5" roomId="4" />
+		<Tile row="7" col="6" roomId="4" />
+		<Tile row="7" col="11">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="7" col="12">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="7" col="23" suspectId="2" suspectDirection="WEST" />
+		<Tile row="8" col="0" roomId="4" />
+		<Tile row="8" col="1" roomId="4" />
+		<Tile row="8" col="2" roomId="4" />
+		<Tile row="8" col="3" roomId="4" />
+		<Tile row="8" col="4" roomId="4" />
+		<Tile row="8" col="5" roomId="4" />
+		<Tile row="8" col="6" roomId="4">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="8" col="7">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="8" col="9" removed="true" />
+		<Tile row="8" col="10" removed="true" />
+		<Tile row="8" col="11" removed="true" />
+		<Tile row="8" col="12" removed="true" />
+		<Tile row="8" col="13" removed="true" />
+		<Tile row="8" col="17">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="8" col="23" removed="true" />
+		<Tile row="9" col="0" roomId="4" />
+		<Tile row="9" col="1" roomId="4" />
+		<Tile row="9" col="2" roomId="4" />
+		<Tile row="9" col="3" roomId="4" />
+		<Tile row="9" col="4" roomId="4" />
+		<Tile row="9" col="5" roomId="4" />
+		<Tile row="9" col="6" roomId="4" />
+		<Tile row="9" col="9" removed="true" />
+		<Tile row="9" col="10" removed="true" />
+		<Tile row="9" col="11" removed="true" />
+		<Tile row="9" col="12" removed="true" />
+		<Tile row="9" col="13" removed="true" />
+		<Tile row="9" col="16" roomId="5" />
+		<Tile row="9" col="17" roomId="5">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="9" col="18" roomId="5" />
+		<Tile row="9" col="19" roomId="5" />
+		<Tile row="9" col="20" roomId="5" />
+		<Tile row="9" col="21" roomId="5" />
+		<Tile row="9" col="22" roomId="5" />
+		<Tile row="9" col="23" roomId="5" />
+		<Tile row="10" col="0" removed="true" />
+		<Tile row="10" col="1" roomId="4" />
+		<Tile row="10" col="2" roomId="4" />
+		<Tile row="10" col="3" roomId="4">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="10" col="4" roomId="4" />
+		<Tile row="10" col="5" roomId="4" />
+		<Tile row="10" col="9" removed="true" />
+		<Tile row="10" col="10" removed="true" />
+		<Tile row="10" col="11" removed="true" />
+		<Tile row="10" col="12" removed="true" />
+		<Tile row="10" col="13" removed="true" />
+		<Tile row="10" col="16" roomId="5" />
+		<Tile row="10" col="17" roomId="5" />
+		<Tile row="10" col="18" roomId="5" />
+		<Tile row="10" col="19" roomId="5" />
+		<Tile row="10" col="20" roomId="5" />
+		<Tile row="10" col="21" roomId="5" />
+		<Tile row="10" col="22" roomId="5" />
+		<Tile row="10" col="23" roomId="5" />
+		<Tile row="11" col="0" removed="true" />
+		<Tile row="11" col="1">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="11" col="3">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="11" col="9" removed="true" />
+		<Tile row="11" col="10" removed="true" />
+		<Tile row="11" col="11" removed="true" />
+		<Tile row="11" col="12" removed="true" />
+		<Tile row="11" col="13" removed="true" />
+		<Tile row="11" col="16" roomId="5" />
+		<Tile row="11" col="17" roomId="5" />
+		<Tile row="11" col="18" roomId="5" />
+		<Tile row="11" col="19" roomId="5" />
+		<Tile row="11" col="20" roomId="5" />
+		<Tile row="11" col="21" roomId="5" />
+		<Tile row="11" col="22" roomId="5" />
+		<Tile row="11" col="23" roomId="5" />
+		<Tile row="12" col="0" roomId="6" />
+		<Tile row="12" col="1" roomId="6">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="12" col="2" roomId="6" />
+		<Tile row="12" col="3" roomId="6" />
+		<Tile row="12" col="4" roomId="6" />
+		<Tile row="12" col="5" roomId="6" />
+		<Tile row="12" col="9" removed="true" />
+		<Tile row="12" col="10" removed="true" />
+		<Tile row="12" col="11" removed="true" />
+		<Tile row="12" col="12" removed="true" />
+		<Tile row="12" col="13" removed="true" />
+		<Tile row="12" col="15">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="12" col="16" roomId="5">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="12" col="17" roomId="5" />
+		<Tile row="12" col="18" roomId="5" />
+		<Tile row="12" col="19" roomId="5" />
+		<Tile row="12" col="20" roomId="5" />
+		<Tile row="12" col="21" roomId="5" />
+		<Tile row="12" col="22" roomId="5" />
+		<Tile row="12" col="23" roomId="5" />
+		<Tile row="13" col="0" roomId="6" />
+		<Tile row="13" col="1" roomId="6" />
+		<Tile row="13" col="2" roomId="6" />
+		<Tile row="13" col="3" roomId="6" />
+		<Tile row="13" col="4" roomId="6" />
+		<Tile row="13" col="5" roomId="6" />
+		<Tile row="13" col="9" removed="true" />
+		<Tile row="13" col="10" removed="true" />
+		<Tile row="13" col="11" removed="true" />
+		<Tile row="13" col="12" removed="true" />
+		<Tile row="13" col="13" removed="true" />
+		<Tile row="13" col="16" roomId="5" />
+		<Tile row="13" col="17" roomId="5" />
+		<Tile row="13" col="18" roomId="5" />
+		<Tile row="13" col="19" roomId="5" />
+		<Tile row="13" col="20" roomId="5" />
+		<Tile row="13" col="21" roomId="5" />
+		<Tile row="13" col="22" roomId="5" />
+		<Tile row="13" col="23" roomId="5" />
+		<Tile row="14" col="0" roomId="6" />
+		<Tile row="14" col="1" roomId="6" />
+		<Tile row="14" col="2" roomId="6" />
+		<Tile row="14" col="3" roomId="6" />
+		<Tile row="14" col="4" roomId="6" />
+		<Tile row="14" col="5" roomId="6" />
+		<Tile row="14" col="9" removed="true" />
+		<Tile row="14" col="10" removed="true" />
+		<Tile row="14" col="11" removed="true" />
+		<Tile row="14" col="12" removed="true" />
+		<Tile row="14" col="13" removed="true" />
+		<Tile row="14" col="16" roomId="5" />
+		<Tile row="14" col="17" roomId="5" />
+		<Tile row="14" col="18" roomId="5" />
+		<Tile row="14" col="19" roomId="5" />
+		<Tile row="14" col="20" roomId="5" />
+		<Tile row="14" col="21" roomId="5" />
+		<Tile row="14" col="22" roomId="5" />
+		<Tile row="14" col="23" roomId="5" />
+		<Tile row="15" col="0" roomId="6" />
+		<Tile row="15" col="1" roomId="6" />
+		<Tile row="15" col="2" roomId="6" />
+		<Tile row="15" col="3" roomId="6" />
+		<Tile row="15" col="4" roomId="6" />
+		<Tile row="15" col="5" roomId="6">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="15" col="6">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="15" col="19" roomId="5" />
+		<Tile row="15" col="20" roomId="5" />
+		<Tile row="15" col="21" roomId="5" />
+		<Tile row="15" col="22" roomId="5" />
+		<Tile row="15" col="23" roomId="5" />
+		<Tile row="16" col="0" roomId="6" />
+		<Tile row="16" col="1" roomId="6" />
+		<Tile row="16" col="2" roomId="6" />
+		<Tile row="16" col="3" roomId="6" />
+		<Tile row="16" col="4" roomId="6" />
+		<Tile row="16" col="5" roomId="6" />
+		<Tile row="16" col="9">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="16" col="14">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="16" col="23" removed="true" />
+		<Tile row="17" col="0" removed="true" />
+		<Tile row="17" col="8" roomId="8" />
+		<Tile row="17" col="9" roomId="8">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="17" col="10" roomId="8" />
+		<Tile row="17" col="11" roomId="8" />
+		<Tile row="17" col="12" roomId="8" />
+		<Tile row="17" col="13" roomId="8" />
+		<Tile row="17" col="14" roomId="8">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="17" col="15" roomId="8" />
+		<Tile row="17" col="19">
+			<Door>SOUTH</Door>
+		</Tile>
+		<Tile row="18" col="0" suspectId="5" suspectDirection="EAST" />
+		<Tile row="18" col="8" roomId="8" />
+		<Tile row="18" col="9" roomId="8" />
+		<Tile row="18" col="10" roomId="8" />
+		<Tile row="18" col="11" roomId="8" />
+		<Tile row="18" col="12" roomId="8" />
+		<Tile row="18" col="13" roomId="8" />
+		<Tile row="18" col="14" roomId="8" />
+		<Tile row="18" col="15" roomId="8" />
+		<Tile row="18" col="18" roomId="9" />
+		<Tile row="18" col="19" roomId="9">
+			<Door>NORTH</Door>
+		</Tile>
+		<Tile row="18" col="20" roomId="9" />
+		<Tile row="18" col="21" roomId="9" />
+		<Tile row="18" col="22" roomId="9" />
+		<Tile row="18" col="23" removed="true" />
+		<Tile row="19" col="0" removed="true" />
+		<Tile row="19" col="1" roomId="7">
+			<PassageConnection row="5" col="23" />
+		</Tile>
+		<Tile row="19" col="2" roomId="7" />
+		<Tile row="19" col="3" roomId="7" />
+		<Tile row="19" col="4" roomId="7">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="19" col="5">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="19" col="7">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="19" col="8" roomId="8">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="19" col="9" roomId="8" />
+		<Tile row="19" col="10" roomId="8" />
+		<Tile row="19" col="11" roomId="8" />
+		<Tile row="19" col="12" roomId="8" />
+		<Tile row="19" col="13" roomId="8" />
+		<Tile row="19" col="14" roomId="8" />
+		<Tile row="19" col="15" roomId="8">
+			<Door>EAST</Door>
+		</Tile>
+		<Tile row="19" col="16">
+			<Door>WEST</Door>
+		</Tile>
+		<Tile row="19" col="18" roomId="9" />
+		<Tile row="19" col="19" roomId="9" />
+		<Tile row="19" col="20" roomId="9" />
+		<Tile row="19" col="21" roomId="9" />
+		<Tile row="19" col="22" roomId="9" />
+		<Tile row="19" col="23" roomId="9" />
+		<Tile row="20" col="0" roomId="7" />
+		<Tile row="20" col="1" roomId="7" />
+		<Tile row="20" col="2" roomId="7" />
+		<Tile row="20" col="3" roomId="7" />
+		<Tile row="20" col="4" roomId="7" />
+		<Tile row="20" col="5" roomId="7" />
+		<Tile row="20" col="8" roomId="8" />
+		<Tile row="20" col="9" roomId="8" />
+		<Tile row="20" col="10" roomId="8" />
+		<Tile row="20" col="11" roomId="8" />
+		<Tile row="20" col="12" roomId="8" />
+		<Tile row="20" col="13" roomId="8" />
+		<Tile row="20" col="14" roomId="8" />
+		<Tile row="20" col="15" roomId="8" />
+		<Tile row="20" col="18" roomId="9" />
+		<Tile row="20" col="19" roomId="9" />
+		<Tile row="20" col="20" roomId="9" />
+		<Tile row="20" col="21" roomId="9" />
+		<Tile row="20" col="22" roomId="9" />
+		<Tile row="20" col="23" roomId="9" />
+		<Tile row="21" col="0" roomId="7" />
+		<Tile row="21" col="1" roomId="7" />
+		<Tile row="21" col="2" roomId="7" />
+		<Tile row="21" col="3" roomId="7" />
+		<Tile row="21" col="4" roomId="7" />
+		<Tile row="21" col="5" roomId="7" />
+		<Tile row="21" col="8" roomId="8" />
+		<Tile row="21" col="9" roomId="8" />
+		<Tile row="21" col="10" roomId="8" />
+		<Tile row="21" col="11" roomId="8" />
+		<Tile row="21" col="12" roomId="8" />
+		<Tile row="21" col="13" roomId="8" />
+		<Tile row="21" col="14" roomId="8" />
+		<Tile row="21" col="15" roomId="8" />
+		<Tile row="21" col="18" roomId="9" />
+		<Tile row="21" col="19" roomId="9" />
+		<Tile row="21" col="20" roomId="9" />
+		<Tile row="21" col="21" roomId="9" />
+		<Tile row="21" col="22" roomId="9" />
+		<Tile row="21" col="23" roomId="9" />
+		<Tile row="22" col="0" roomId="7" />
+		<Tile row="22" col="1" roomId="7" />
+		<Tile row="22" col="2" roomId="7" />
+		<Tile row="22" col="3" roomId="7" />
+		<Tile row="22" col="4" roomId="7" />
+		<Tile row="22" col="5" roomId="7" />
+		<Tile row="22" col="8" roomId="8" />
+		<Tile row="22" col="9" roomId="8" />
+		<Tile row="22" col="10" roomId="8" />
+		<Tile row="22" col="11" roomId="8" />
+		<Tile row="22" col="12" roomId="8" />
+		<Tile row="22" col="13" roomId="8" />
+		<Tile row="22" col="14" roomId="8" />
+		<Tile row="22" col="15" roomId="8" />
+		<Tile row="22" col="18" roomId="9" />
+		<Tile row="22" col="19" roomId="9" />
+		<Tile row="22" col="20" roomId="9" />
+		<Tile row="22" col="21" roomId="9" />
+		<Tile row="22" col="22" roomId="9" />
+		<Tile row="22" col="23" roomId="9" />
+		<Tile row="23" col="0" roomId="7" />
+		<Tile row="23" col="1" roomId="7" />
+		<Tile row="23" col="2" roomId="7" />
+		<Tile row="23" col="3" roomId="7" />
+		<Tile row="23" col="4" roomId="7" />
+		<Tile row="23" col="5" roomId="7" />
+		<Tile row="23" col="6" removed="true" />
+		<Tile row="23" col="10" roomId="8" />
+		<Tile row="23" col="11" roomId="8" />
+		<Tile row="23" col="12" roomId="8" />
+		<Tile row="23" col="13" roomId="8" />
+		<Tile row="23" col="17" removed="true" />
+		<Tile row="23" col="18" roomId="9">
+			<PassageConnection row="3" col="0" />
+		</Tile>
+		<Tile row="23" col="19" roomId="9" />
+		<Tile row="23" col="20" roomId="9" />
+		<Tile row="23" col="21" roomId="9" />
+		<Tile row="23" col="22" roomId="9" />
+		<Tile row="23" col="23" roomId="9" />
+		<Tile row="24" col="0" removed="true" />
+		<Tile row="24" col="1" removed="true" />
+		<Tile row="24" col="2" removed="true" />
+		<Tile row="24" col="3" removed="true" />
+		<Tile row="24" col="4" removed="true" />
+		<Tile row="24" col="5" removed="true" />
+		<Tile row="24" col="6" removed="true" />
+		<Tile row="24" col="7" removed="true" />
+		<Tile row="24" col="8" removed="true" />
+		<Tile row="24" col="9" suspectId="4" suspectDirection="NORTH" />
+		<Tile row="24" col="10" roomId="8" />
+		<Tile row="24" col="11" roomId="8" />
+		<Tile row="24" col="12" roomId="8" />
+		<Tile row="24" col="13" roomId="8" />
+		<Tile row="24" col="14" suspectId="3" suspectDirection="NORTH" />
+		<Tile row="24" col="15" removed="true" />
+		<Tile row="24" col="16" removed="true" />
+		<Tile row="24" col="17" removed="true" />
+		<Tile row="24" col="18" removed="true" />
+		<Tile row="24" col="19" removed="true" />
+		<Tile row="24" col="20" removed="true" />
+		<Tile row="24" col="21" removed="true" />
+		<Tile row="24" col="22" removed="true" />
+		<Tile row="24" col="23" removed="true" />
+	</ClueBoard>
+	<Story>Mr. Burns--apparently the victim of foul play--is found dead in Springfield.</Story>
+</ClueGame>
