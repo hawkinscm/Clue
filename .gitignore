@@ -1,6 +1,6 @@
 out/*
 bin/*
-*/target/*
+target
 *.iml
 .idea/*
 Clue.log

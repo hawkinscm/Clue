@@ -74,7 +74,7 @@ public class Planner {
       "  (:predicates\n" +
       "   (adj ?square-1 - square ?dir - direction ?square-2 - square)\n" +
       "   (standingAt ?square - square))\n" +
-      "  (:main.java.hawkinscm.clue.action move\n" +
+      "  (:action move\n" +
       "    :parameters (?from - square ?dir - direction ?to - square)\n" +
       "    :precondition (and (adj ?from ?dir ?to)\n" +
       "                       (standingAt ?from))\n" +

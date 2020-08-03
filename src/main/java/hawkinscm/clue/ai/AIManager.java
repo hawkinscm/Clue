@@ -23,10 +23,8 @@ import hawkinscm.clue.model.Weapon;
  * Handler for AI.
  */
 public class AIManager {
+  private ClueGameData gameData;
 	private List<Player> players;
-	private List<Room> rooms;
-	private List<Suspect> suspects;
-	private List<Weapon> weapons;
 	
 	private LinkedList<SuggestionResult> suggestionRecord;
 	private ArrayList<AINotebook> playerNotebooks;
@@ -35,26 +33,21 @@ public class AIManager {
 
   /**
 	 * Creates a new AI Manager.
-   * @param clueGameData data for clue game
+   * @param gameData data for clue game
    * @param players all card-holding players in the current game
-   * @param rooms all rooms in the game
-   * @param suspects all suspects in the game
-   * @param weapons all weapons in the game
    */
-	public AIManager(ClueGameData clueGameData, List<Player> players, List<Room> rooms, List<Suspect> suspects, List<Weapon> weapons) {
-    this.solvers = new HashMap<Player, ClueSolver>();
+	public AIManager(ClueGameData gameData, List<Player> players) {
+    this.solvers = new HashMap<>();
 		this.players = players;
-		this.rooms = rooms;
-		this.suspects = suspects;
-		this.weapons = weapons;
+		this.gameData = gameData;
 		
-		playerNotebooks = new ArrayList<AINotebook>();
-		suggestionRecord = new LinkedList<SuggestionResult>();
+		playerNotebooks = new ArrayList<>();
+		suggestionRecord = new LinkedList<>();
 	}
 	
 	// todo
-	public void initializeAIPlayer(Player player) {
-    List<AICard> cards = new ArrayList<AICard>(player.getCards().size());
+	/*public void initializeAIPlayer(Player player) {
+    List<AICard> cards = new ArrayList<>(player.getCards().size());
     for (Card card : player.getCards()) {
       System.out.println(card.getName());
       cards.add(AICard.valueOf(card.getName()));
@@ -83,19 +76,10 @@ public class AIManager {
     return null;
   }
 
-  /**
-	 * Adds a single suggestion record.
-	 * @param suggester the person who made a suggestion
-	 * @param responder the person who answered the suggestion (will be null if no one could help)
-	 * @param card card that was shown by the responder (will be null if responder is null)
-	 */
 	public void addSuggesionResult(Player suggester, Player responder, Card card) {
 		suggestionRecord.add(new SuggestionResult(suggester, responder, card));
 	}
 
-  /**
-   * Handles a turn for a computer player.
-   */
   public void takeTurn(Player player, HostGUI hostGUI) {
     try {
       ClueSolver solver = solvers.get(player);
@@ -136,7 +120,7 @@ public class AIManager {
         //roll the dice and select the room to go to based on the roll
         int stepsAllowed = roll(hostGUI, player);
 
-        List<AICard> roomsToMoveTo = new ArrayList<AICard>(AICard.getRooms());
+        List<AICard> roomsToMoveTo = new ArrayList<>(AICard.getRooms());
         List<Plan> plans = null;
         if (currentPlayerRoom != null) {
           roomsToMoveTo.remove(currentPlayerRoom);
@@ -146,7 +130,7 @@ public class AIManager {
           plans = Planner.plan(location, null, roomsToMoveTo);
         }
 
-        List<Plan> completablePlans = new ArrayList<Plan>(roomsToMoveTo.size());
+        List<Plan> completablePlans = new ArrayList<>(roomsToMoveTo.size());
         for (Plan plan : plans) {
           System.out.println("Plan(" + plan.size() + ") to get to: " + plan.getDestination().name());
           if (stepsAllowed >= plan.size()) {
@@ -192,15 +176,11 @@ public class AIManager {
     }
     catch (NullPointerException e) {
       e.printStackTrace();
-      System.out.println("No plan to follow because the main.java.hawkinscm.clue.gui is moving the person outside the box");
+      System.out.println("No plan to follow because the gui is moving the person outside the box");
     }
     //end turn
   }
 
-  /**
-   * Steps from the current tile to the tile in the given direction.
-   * @param direction direction to step/move
-   */
   private void stepToTile(HostGUI hostGUI, Player player, DisplayTile.Direction direction) {
     Suspect suspect = hostGUI.getSuspect(player.getId());
     DisplayTile currentTile = hostGUI.board.getSuspectTile(suspect);
@@ -224,7 +204,7 @@ public class AIManager {
     Suspect suspect = hostGUI.getSuspect(player.getId());
     DisplayTile currentTile = hostGUI.board.getSuspectTile(suspect);
     Room startingRoom = currentTile.getRoom();
-    List<Room> linkedRooms = new ArrayList<Room>();
+    List<Room> linkedRooms = new ArrayList<>();
     for (DisplayTile tile : hostGUI.board.getRoomTiles(startingRoom)) {
       if (tile.isPassage() && tile.getPassageConnection().isRoomTile()) {
         Room linkedRoom = tile.getPassageConnection().getRoom();
@@ -312,5 +292,5 @@ public class AIManager {
     if (suggestingPlayer.isComputer() && disprovingCard != null) {
       solvers.get(suggestingPlayer).showCard(AICard.valueOf(disprovingCard.getName()));
     }
-  }
+  }*/
 }

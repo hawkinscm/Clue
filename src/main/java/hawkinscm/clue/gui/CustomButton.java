@@ -25,7 +25,7 @@ public abstract class CustomButton extends JButton {
 	}
 	
 	/**
-	 * Creates a new CustomButton button with the given main.java.hawkinscm.clue.action.
+	 * Creates a new CustomButton button with the given action.
 	 * @param a the Action used to specify the new button.
 	 */
 	public CustomButton(Action a) {

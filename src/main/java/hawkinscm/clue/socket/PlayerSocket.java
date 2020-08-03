@@ -13,7 +13,7 @@ import java.net.SocketException;
 import hawkinscm.clue.model.Player;
 
 /**
- * A participant-connected main.java.hawkinscm.clue.socket that is used to communicate back and forth between the host and a participating network player.
+ * A participant-connected socket that is used to communicate back and forth between the host and a participating network player.
  */
 public class PlayerSocket extends Socket {
 
@@ -34,7 +34,7 @@ public class PlayerSocket extends Socket {
 			isCleanlyClosed = false;
 		}
 		catch (BindException ex) {
-			String message = "<html> Another application is using the desired main.java.hawkinscm.clue.socket: " + (BASE_PORT + portIndex) + ". <br>";
+			String message = "<html> Another application is using the desired socket: " + (BASE_PORT + portIndex) + ". <br>";
 			message += " This can also be caused by having more than one CLUE game hosting on your machine or network. </html>";
 			Messenger.error(message, "Socket Error");
 		}
@@ -60,8 +60,8 @@ public class PlayerSocket extends Socket {
 	}
 	
 	/**
-	 * Returns the connection main.java.hawkinscm.clue.socket port number used by this Player Socket.
-	 * @return the connection main.java.hawkinscm.clue.socket port number used by this Player Socket
+	 * Returns the connection socket port number used by this Player Socket.
+	 * @return the connection socket port number used by this Player Socket
 	 */
 	public int getPortIndex() {
 		if (serverSocket == null)
@@ -84,7 +84,7 @@ public class PlayerSocket extends Socket {
 			return reader.readLine();
 		} 
 		catch (IOException ex) {
-			if (ex instanceof SocketException && ex.getMessage().equals("main.java.hawkinscm.clue.socket closed"))
+			if (ex instanceof SocketException && ex.getMessage().equals("socket closed"))
 				return null;
 			
 			Messenger.error(ex, ex.getMessage(), "Socket Error");
@@ -93,8 +93,8 @@ public class PlayerSocket extends Socket {
 	}
 	
 	/**
-	 * Closes and reconnects the main.java.hawkinscm.clue.socket.
-	 * @throws IOException on any main.java.hawkinscm.clue.socket/IO error
+	 * Closes and reconnects the socket.
+	 * @throws IOException on any socket/IO error
 	 */
 	public void reconnect() throws IOException {
 		if (socket != null)
@@ -109,8 +109,8 @@ public class PlayerSocket extends Socket {
 	}
 	
 	/**
-	 * Returns whether or not the server main.java.hawkinscm.clue.socket is connected.
-	 * @return true if this main.java.hawkinscm.clue.socket is connected; false otherwise
+	 * Returns whether or not the server socket is connected.
+	 * @return true if this socket is connected; false otherwise
 	 */
 	public boolean isConnected() {
 		return (socket != null && socket.isConnected());

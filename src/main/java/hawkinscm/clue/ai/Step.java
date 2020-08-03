@@ -44,6 +44,6 @@ public class Step {
 
   @Override
   public String toString() {
-    return "take main.java.hawkinscm.clue.action of moving " + direction.name() + " to " + (room == null ? destination : room.name());
+    return "take action of moving " + direction.name() + " to " + (room == null ? destination : room.name());
   }
 }

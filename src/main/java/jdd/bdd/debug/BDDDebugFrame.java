@@ -89,8 +89,8 @@ public class BDDDebugFrame
 					CacheFrame cf = (CacheFrame) it.next();
 					cf.repaint();
 				}
-			} catch(Exception _) {
-				// also catches NULL pointer expcetion during GC and stuff..
+			} catch(Exception e) {
+				// also catches NULL pointer exception during GC and stuff..
 			}
 		}
 

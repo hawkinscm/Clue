@@ -11,7 +11,7 @@ public class ErrorWriter {
 	
 	/**
 	 * Begins logging errors and exceptions to the specified file.
-	 * @param fileName filename of the main.java.hawkinscm.clue.log file to write to
+	 * @param fileName filename of the log file to write to
 	 * @throws IOException on any file/write errors
 	 */
 	public static void beginLogging(String fileName) throws IOException {

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
- * A host-connected main.java.hawkinscm.clue.socket that is used to communicate back and forth between the host and the participant.
+ * A host-connected socket that is used to communicate back and forth between the host and the participant.
  */
 public class ParticipantSocket extends Socket {
 	
@@ -22,7 +22,7 @@ public class ParticipantSocket extends Socket {
 	 * Connects to the given host and port and returns the given default player name for the participant
 	 * @param host host to connect to
 	 * @param playerIndex index of the player used to determine the port number to connect to
-	 * @throws IOException on any main.java.hawkinscm.clue.socket, reading, or writing error
+	 * @throws IOException on any socket, reading, or writing error
 	 */
 	public void connect(String host, int playerIndex) throws IOException {
 		if (playerIndex < 0 || playerIndex > 9)
@@ -37,8 +37,8 @@ public class ParticipantSocket extends Socket {
 	}
 	
 	/**
-	 * Closes and reconnects the main.java.hawkinscm.clue.socket.
-	 * @throws IOException on any main.java.hawkinscm.clue.socket/IO error
+	 * Closes and reconnects the socket.
+	 * @throws IOException on any socket/IO error
 	 */
 	public void reconnect() throws IOException {
 		try { socket.close(); } catch (IOException ex) {}
@@ -59,8 +59,8 @@ public class ParticipantSocket extends Socket {
 	}
 		
 	/**
-	 * Returns the connection main.java.hawkinscm.clue.socket port number used by this Player Socket.
-	 * @return the connection main.java.hawkinscm.clue.socket port number used by this Player Socket
+	 * Returns the connection socket port number used by this Player Socket.
+	 * @return the connection socket port number used by this Player Socket
 	 */
 	public int getPortIndex() {
 		if (socket == null)

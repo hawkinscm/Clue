@@ -743,10 +743,10 @@ public abstract class ClueGUI extends JFrame implements Observer {
 	 */
 	public static void main(String[] args) {
 		try {
-			ErrorWriter.beginLogging("Clue.main.java.hawkinscm.clue.log");
+			ErrorWriter.beginLogging("Clue.log");
 		}
 		catch (IOException ex) {
-			Messenger.error(ex, "Failed to create/open error main.java.hawkinscm.clue.log file", "Log Error");
+			Messenger.error(ex, "Failed to create/open error log file", "Log Error");
 		}
 		
 		// Run the GUI in a thread safe environment

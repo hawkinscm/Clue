@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.net.SocketException;
 
 /**
- * A connected main.java.hawkinscm.clue.socket that is used to communicate back and forth over a network.
+ * A connected socket that is used to communicate back and forth over a network.
  */
 public class Socket {
 
@@ -21,7 +21,7 @@ public class Socket {
 	protected PrintWriter writer;
 		
 	/**
-	 * Creates a new empty main.java.hawkinscm.clue.socket.
+	 * Creates a new empty socket.
 	 */
 	protected Socket() {
 		socket = null;
@@ -31,8 +31,8 @@ public class Socket {
 	}
 	
 	/**
-	 * Returns an main.java.hawkinscm.clue.action message received from the main.java.hawkinscm.clue.socket.
-	 * @return an main.java.hawkinscm.clue.action message received from the main.java.hawkinscm.clue.socket
+	 * Returns an action message received from the socket.
+	 * @return an action message received from the socket
 	 */
 	public String getActionMessage() {
 		try {
@@ -46,8 +46,8 @@ public class Socket {
 	}
 	
 	/**
-	 * Sends an main.java.hawkinscm.clue.action message across the main.java.hawkinscm.clue.socket.
-	 * @param actionMessage main.java.hawkinscm.clue.action message to send
+	 * Sends an action message across the socket.
+	 * @param actionMessage action message to send
 	 */
 	public void sendActionMessage(String actionMessage) {
 		writer.println(actionMessage);
@@ -55,8 +55,8 @@ public class Socket {
 	}	
 	
 	/**
-	 * Returns whether or not this main.java.hawkinscm.clue.socket has been closed.
-	 * @return true if the main.java.hawkinscm.clue.socket has not been initialized or connected or if it has been closed; false, otherwise
+	 * Returns whether or not this socket has been closed.
+	 * @return true if the socket has not been initialized or connected or if it has been closed; false, otherwise
 	 */
 	public boolean isCleanlyClosed() {
 		return (isCleanlyClosed);

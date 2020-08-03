@@ -36,7 +36,7 @@
 		<Tile row="0" col="4" roomId="1" />
 		<Tile row="0" col="5" roomId="1" />
 		<Tile row="0" col="6" removed="true" />
-		<Tile row="0" col="7" suspectId="7" suspectDirection="NORTH" />
+		<Tile row="0" col="7" suspectId="7" suspectDirection="SOUTH" />
 		<Tile row="0" col="8" removed="true" />
 		<Tile row="0" col="9" removed="true" />
 		<Tile row="0" col="10" roomId="2" />
@@ -384,7 +384,7 @@
 		<Tile row="17" col="19">
 			<Door>SOUTH</Door>
 		</Tile>
-		<Tile row="17" col="23" suspectId="8" suspectDirection="NORTH" />
+		<Tile row="17" col="23" suspectId="8" suspectDirection="WEST" />
 		<Tile row="18" col="0" suspectId="5" suspectDirection="EAST" />
 		<Tile row="18" col="8" roomId="8" />
 		<Tile row="18" col="9" roomId="8" />

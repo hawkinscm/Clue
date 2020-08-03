@@ -114,10 +114,11 @@ public class HostGUI extends ClueGUI {
 		playerSockets = playerInput.getPlayerSockets();
 		
 		clueGameData = gameData;
-		aiManager = new AIManager(gameData, players, gameData.getRooms(), gameData.getSuspects(), gameData.getWeapons());
+		aiManager = new AIManager(gameData, players);
 		for (Player player : players)
-			if (player.isComputer())
-				aiManager.initializeAIPlayer(player);
+			if (player.isComputer()) {
+				//aiManager.initializeAIPlayer(player);
+			}
 		
 		boolean hasSuspects = false;
 		List<DisplayTile> boardTiles = gameData.getBoard().getTiles();
@@ -271,8 +272,8 @@ public class HostGUI extends ClueGUI {
 	}
 
 	/**
-	 * Starts a listener on the given player main.java.hawkinscm.clue.socket.
-	 * @param playerSocket the main.java.hawkinscm.clue.socket to start listening to
+	 * Starts a listener on the given player socket.
+	 * @param playerSocket the socket to start listening to
 	 */
 	private void startPlayerSocketListener(final PlayerSocket playerSocket) {
 		Thread socketListenerThread = new Thread(() -> {
@@ -446,7 +447,7 @@ public class HostGUI extends ClueGUI {
 	 */
 	private boolean disproveSuggestion(int suggestingPlayerId, Player answeringPlayer, Card disprovingCard) {
 		Player suggestingPlayer = getPlayerById(suggestingPlayerId);
-		aiManager.addSuggesionResult(suggestingPlayer, answeringPlayer, disprovingCard);
+		//aiManager.addSuggesionResult(suggestingPlayer, answeringPlayer, disprovingCard);
 		
 		if (disprovingCard == null) {
 			String message = answeringPlayer + " was unable to disprove the suggestion.";
@@ -552,9 +553,9 @@ public class HostGUI extends ClueGUI {
 	}
 	
 	/**
-	 * Returns the player main.java.hawkinscm.clue.socket specified by the given player id.
-	 * @param playerId id of the player main.java.hawkinscm.clue.socket's player to return
-	 * @return the player main.java.hawkinscm.clue.socket specified by the given player id
+	 * Returns the player socket specified by the given player id.
+	 * @param playerId id of the player socket's player to return
+	 * @return the player socket specified by the given player id
 	 */
 	private PlayerSocket getPlayerSocketById(int playerId) {
 		for (PlayerSocket socket : playerSockets)
@@ -680,8 +681,8 @@ public class HostGUI extends ClueGUI {
 	}
 
 	/**
-	 * Notifies all player sockets of a specified main.java.hawkinscm.clue.action.
-	 * @param actionMessage main.java.hawkinscm.clue.action message to send to all player sockets
+	 * Notifies all player sockets of a specified action.
+	 * @param actionMessage action message to send to all player sockets
 	 */
 	private void notifyPlayerSockets(String actionMessage) {
 		for (PlayerSocket playerSocket : playerSockets)
