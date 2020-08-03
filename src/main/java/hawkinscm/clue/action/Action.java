@@ -9,31 +9,31 @@ import hawkinscm.clue.model.Weapon;
 import hawkinscm.clue.gui.Messenger;
 
 /**
- * Abstract class representing an main.java.hawkinscm.clue.action that can be communicated via text across a network.
+ * Abstract class representing an action that can be communicated via text across a network.
  * Every class that inherits Action must have an empty constructor in order for the parseAction method to work.
  */
 public abstract class Action<T> {
 
 	private String message;
-	
+
 	protected final static String MAIN_DELIM = ";";
 	protected final static String INNER_DELIM = ",";
-	
+
 	private final static String ROOM_PREFIX = "r.";
 	private final static String SUSPECT_PREFIX = "s.";
 	private final static String WEAPON_PREFIX = "w.";
-	
+
 	/**
-	 * Sets the message for this main.java.hawkinscm.clue.action.
-	 * @param message main.java.hawkinscm.clue.action message to set
+	 * Sets the message for this action.
+	 * @param message action message to set
 	 */
 	protected void setMessage(String message) {
 		this.message = message;
 	}
-	
+
 	/**
-	 * Returns the main.java.hawkinscm.clue.action message without the main.java.hawkinscm.clue.action class specifier heading.
-	 * @return the main.java.hawkinscm.clue.action message without the main.java.hawkinscm.clue.action class specifier heading
+	 * Returns the action message without the action class specifier heading.
+	 * @return the action message without the action class specifier heading
 	 */
 	protected String getMessageWithoutClassHeader() {
 		int firstDividerIndex = message.indexOf(MAIN_DELIM);
@@ -41,7 +41,7 @@ public abstract class Action<T> {
 			return MAIN_DELIM;
 		return message.substring(firstDividerIndex + 1);
 	}
-		
+
 	/**
 	 * Parses and returns a card from the given card message.
 	 * @param cardMessage card message to parse
@@ -53,7 +53,7 @@ public abstract class Action<T> {
 	protected Card parseCard(String cardMessage, List<Room> rooms, List<Suspect> suspects, List<Weapon> weapons) {
 		if (cardMessage.startsWith("null"))
 			return null;
-		
+
 		int id = Integer.parseInt(cardMessage.substring(2));
 		if (cardMessage.startsWith(ROOM_PREFIX)) {
 			for (Room room : rooms)
@@ -72,7 +72,7 @@ public abstract class Action<T> {
 		}
 		throw new IllegalArgumentException("Unable to create card for card message: " + cardMessage);
 	}
-	
+
 	/**
 	 * Creates a data message from the given card.
 	 * @param card card to convert to a string
@@ -91,29 +91,29 @@ public abstract class Action<T> {
 	}
 
 	/**
-	 * Returns this main.java.hawkinscm.clue.action as a string message.
-	 * @return this main.java.hawkinscm.clue.action as a string message
+	 * Returns this action as a string message.
+	 * @return this action as a string message
 	 */
 	public String getMessage() {
 		return message;
 	}
-	
+
 	/**
-	 * Performs this main.java.hawkinscm.clue.action using the given object.
-	 * @param obj object needed to performing the main.java.hawkinscm.clue.action.
+	 * Performs this action using the given object.
+	 * @param obj object needed to performing the action.
 	 * @return return an array of reply messages or null if not applicable
 	 */
 	public abstract String[] performAction(T obj);
-	
+
 	/**
 	 * Returns the class that the class requires in order to handle a message.
 	 * @return the class that the class requires in order to handle a message
 	 */
 	public abstract Class<T> getActionTypeClass();
-		
+
 	/**
-	 * Parses the given main.java.hawkinscm.clue.action message then creates and returns an Action ready to be performed.
-	 * @param actionMessage main.java.hawkinscm.clue.action message to parse
+	 * Parses the given action message then creates and returns an Action ready to be performed.
+	 * @param actionMessage action message to parse
 	 * @return the parsed Action
 	 */
 	public static Action<?> parseAction(String actionMessage) {
@@ -128,7 +128,7 @@ public abstract class Action<T> {
 				return parsedAction;
 			}
 			catch (ClassNotFoundException ex) {
-				return new Action<Object>() {					
+				return new Action<Object>() {
 					@Override
 					public String[] performAction(Object obj) {
 						return null;
@@ -138,14 +138,14 @@ public abstract class Action<T> {
 					public Class<Object> getActionTypeClass() {
 						return Object.class;
 					}
-					
+
 				};
 			}
 		}
 		catch (Exception ex) {
 			Messenger.error(ex, ex.getMessage() + ": \"" + actionMessage + "\"", "Illegal Action Message");
 		}
-		
+
 		return null;
 	}
 }

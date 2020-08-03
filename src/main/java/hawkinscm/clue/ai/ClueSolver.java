@@ -43,9 +43,9 @@ public class ClueSolver {
     List<Integer> roomConditions = buildConditions(CardType.ROOM);
     List<Integer> suspectConditions = buildConditions(CardType.SUSPECT);
     List<Integer> weaponConditions = buildConditions(CardType.WEAPON);
-    possibleRooms = new ArrayList<AICard>(AICard.getRooms().size());
-    possibleSuspects = new ArrayList<AICard>(AICard.getSuspects().size());
-    possibleWeapons = new ArrayList<AICard>(AICard.getWeapons().size());
+    possibleRooms = new ArrayList<>(AICard.getRooms().size());
+    possibleSuspects = new ArrayList<>(AICard.getSuspects().size());
+    possibleWeapons = new ArrayList<>(AICard.getWeapons().size());
 
     roomKB = buildInitialKB(roomConditions, CardType.ROOM);
     suspectKB = buildInitialKB(suspectConditions, CardType.SUSPECT);
@@ -55,7 +55,7 @@ public class ClueSolver {
   }
 
   private Map<AICard, Integer> createVariables() {
-    Map<AICard, Integer> vars = new HashMap<AICard, Integer>(AICard.values().length);
+    Map<AICard, Integer> vars = new HashMap<>(AICard.values().length);
     for (AICard card : AICard.values()) {
       vars.put(card, bdd.createVar());
     }
@@ -76,7 +76,7 @@ public class ClueSolver {
 
   private List<Integer> buildConditions(CardType type) {
     List<AICard> cards = AICard.getCards(type);
-    List<Integer> conditions = new ArrayList<Integer>();
+    List<Integer> conditions = new ArrayList<>();
     for (int i = 0; i < cards.size(); ++i) {
       int notJ = bdd.getOne();
       for (int j = 0; j < cards.size(); ++j) {
@@ -122,8 +122,8 @@ public class ClueSolver {
   }
 
   public List<AICard> chooseRoomDirection(AICard... availableRooms) {
-    List<AICard> findRooms = new ArrayList<AICard>();
-    List<AICard> findSuspectOrWeapon = new ArrayList<AICard>();
+    List<AICard> findRooms = new ArrayList<>();
+    List<AICard> findSuspectOrWeapon = new ArrayList<>();
     for (AICard room : availableRooms) {
       if (room.getType() != CardType.ROOM) {
         continue;
@@ -146,8 +146,8 @@ public class ClueSolver {
   }
 
   public AICard chooseRoom(AICard... availableRooms) {
-    List<AICard> findRooms = new ArrayList<AICard>();
-    List<AICard> findSuspectOrWeapon = new ArrayList<AICard>();
+    List<AICard> findRooms = new ArrayList<>();
+    List<AICard> findSuspectOrWeapon = new ArrayList<>();
     for (AICard room : availableRooms) {
       if (room.getType() != CardType.ROOM) {
         continue;

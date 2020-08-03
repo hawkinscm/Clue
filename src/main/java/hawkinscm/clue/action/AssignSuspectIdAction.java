@@ -11,7 +11,7 @@ public class AssignSuspectIdAction extends Action<ParticipantGUI> {
 	 * Empty constructor required when inheriting from Action.
 	 */
 	public AssignSuspectIdAction() {}
-	
+
 	/**
 	 * Generates and returns an Assign Suspect Id Action message using the given data.
 	 * @param suspectId id of the suspect to assign to the player
@@ -20,21 +20,21 @@ public class AssignSuspectIdAction extends Action<ParticipantGUI> {
 	public String createMessage(int suspectId) {
 		String message = this.getClass().getName();
 		message += MAIN_DELIM + suspectId;
-		
+
 		setMessage(message);
 		return getMessage();
 	}
-	
+
 	@Override
 	public Class<ParticipantGUI> getActionTypeClass() {
 		return ParticipantGUI.class;
 	}
-	
+
 	@Override
 	public String[] performAction(ParticipantGUI gui) {
 		int suspectId = Integer.parseInt(getMessageWithoutClassHeader());
 		gui.setSuspectId(suspectId);
-		
+
 		return null;
 	}
 }
