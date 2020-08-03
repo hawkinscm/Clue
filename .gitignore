@@ -1,5 +1,7 @@
 out/*
 bin/*
+*/target/*
 *.iml
 .idea/*
 Clue.log
+Clue.cfg
