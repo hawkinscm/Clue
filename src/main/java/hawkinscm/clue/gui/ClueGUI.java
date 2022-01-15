@@ -25,18 +25,7 @@ import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hawkinscm.clue.log.ErrorWriter;
@@ -748,7 +737,14 @@ public abstract class ClueGUI extends JFrame implements Observer {
 		catch (IOException ex) {
 			Messenger.error(ex, "Failed to create/open error log file", "Log Error");
 		}
-		
+
+		try {
+			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		}
+		catch (Exception ex) {
+			Messenger.error(ex, "Unable to set Cross Platform Look and Feel", "Java Swing Error");
+		}
+
 		// Run the GUI in a thread safe environment
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		SwingUtilities.invokeLater(() -> {

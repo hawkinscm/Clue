@@ -89,7 +89,7 @@ public class DisplayTile extends JButton {
 				default	   : return null;
 			}
 		}
-	};
+	}
 	
 	/**
 	 * Constructor for a Display Tile.
@@ -103,6 +103,7 @@ public class DisplayTile extends JButton {
 		suspectDirection = null;
 		
 		setBackground(DEFAULT_TILE_COLOR);
+		setOpaque(true);
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setFocusable(false);
 		setHorizontalTextPosition(JButton.CENTER);
