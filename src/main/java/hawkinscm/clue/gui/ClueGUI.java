@@ -751,20 +751,16 @@ public abstract class ClueGUI extends JFrame implements Observer {
 		
 		// Run the GUI in a thread safe environment
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		SwingUtilities.invokeLater(
-			new Runnable() {
-				public void run() {
-					String prompt = "Would you like to host or join a CLUE game?";
-					ImageIcon icon = ImageHelper.getMGlass();
-					
-					String[] options = {"Host", "Join", "Exit Program"};
-					int result = JOptionPane.showOptionDialog(null, prompt, "Custom CLUE v1.2", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, icon, options, "Host");
-					if (result == JOptionPane.YES_OPTION)
-						new HostGUI();
-					else if (result == JOptionPane.NO_OPTION)
-						new ParticipantGUI();
-				}
-			}
-		);
+		SwingUtilities.invokeLater(() -> {
+			String prompt = "Would you like to host or join a CLUE game?";
+			ImageIcon icon = ImageHelper.getMGlass();
+
+			String[] options = {"Host", "Join", "Exit Program"};
+			int result = JOptionPane.showOptionDialog(null, prompt, "Custom CLUE v1.2", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, icon, options, "Host");
+			if (result == JOptionPane.YES_OPTION)
+				new HostGUI();
+			else if (result == JOptionPane.NO_OPTION)
+				new ParticipantGUI();
+		});
 	}
 }

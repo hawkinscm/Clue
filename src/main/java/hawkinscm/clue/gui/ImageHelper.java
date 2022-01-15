@@ -285,10 +285,11 @@ public class ImageHelper {
 	 * @return a buffered image of the given internal file
 	 */
 	public static BufferedImage getImage(Class<?> guiClass, String filename) {
-		try { 
-        	return ImageIO.read(guiClass.getResource(filename));   
-        } 
-        catch (Exception e) { return null; }
+		try {
+			//noinspection ConstantConditions
+			return ImageIO.read(guiClass.getClassLoader().getResource(filename));
+    }
+    catch (Exception e) { return null; }
 	}
 	
 	/**
@@ -329,10 +330,11 @@ public class ImageHelper {
 	 * @return a buffered image of the given internal file with the specified color made transparent
 	 */
 	public static BufferedImage makeColorTransparent(Class<?> guiClass, String filename, Color color) {
-        try { 
-        	return makeColorTransparent(ImageIO.read(guiClass.getResource(filename)), color);   
-        } 
-        catch (Exception e) { Messenger.error(e.getMessage(), filename); return null; } 
+    try {
+	    //noinspection ConstantConditions
+	    return makeColorTransparent(ImageIO.read(guiClass.getClassLoader().getResource(filename)), color);
+    }
+    catch (Exception e) { Messenger.error(e.getMessage(), filename); return null; }
 	}
 	
 	/**
@@ -383,12 +385,13 @@ public class ImageHelper {
 	 */
 	public static Cursor createCursor(ImageIcon icon, boolean stretchIcon) {
 		Image cursorImage;
-		if (stretchIcon)
-			cursorImage = icon.getImage();
-		else {
-			cursorImage = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB); 
-			Graphics g = cursorImage.getGraphics(); 
+		if (stretchIcon) {
+			cursorImage = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
+			Graphics g = cursorImage.getGraphics();
 			g.drawImage(icon.getImage(), 0, 0, null);
+		}
+		else {
+			cursorImage = icon.getImage();
 		}
 		
 		int iconMiddle = icon.getIconWidth() / (stretchIcon ? 1 : 2);
